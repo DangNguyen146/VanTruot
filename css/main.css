@@ -1,0 +1,379 @@
+.darkmode {
+  background-color: black;
+  color: #fff;
+}
+
+.darkmode .nav-bar {
+  background-color: #222222 !important;
+  color: #fff;
+}
+
+.darkmode .nav-bar .navbar {
+  background-color: #222222 !important;
+}
+
+.darkmode .nav-bar .navbar-light .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.bubbly-button {
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+  color: #fff;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.bubbly-button:focus {
+  outline: 0;
+}
+
+.bubbly-button:hover {
+  color: #f8faff;
+}
+
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 1s;
+  background-repeat: no-repeat;
+}
+
+.bubbly-button:before {
+  display: none;
+  top: -105%;
+  background-image: radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, transparent 20%, black 20%, transparent 30%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, transparent 10%, black 15%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.bubbly-button:after {
+  display: none;
+  top: 105%;
+  background-image: radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, transparent 10%, black 15%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: black;
+}
+
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button-outline {
+  cursor: pointer;
+  position: relative;
+  border-color: black;
+  color: black;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.bubbly-button-outline:hover {
+  color: black;
+}
+
+.bubbly-button-outline:before, .bubbly-button-outline:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 1s;
+  background-repeat: no-repeat;
+}
+
+.bubbly-button-outline:before {
+  display: none;
+  top: -105%;
+  background-image: radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, transparent 20%, black 20%, transparent 30%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, transparent 10%, black 15%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+}
+
+.bubbly-button-outline:after {
+  display: none;
+  top: 105%;
+  background-image: radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, transparent 10%, black 15%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%), radial-gradient(circle, black 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+}
+
+.bubbly-button-outline:active {
+  transform: scale(0.9);
+}
+
+.bubbly-button-outline.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button-outline.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.nav-bar {
+  position: relative;
+  z-index: 9999999;
+  top: 0px !important;
+  background-color: #fff;
+}
+
+.nav-bar .navbar {
+  position: fixed;
+  background-color: #fff;
+  top: 0px !important;
+}
+
+.nav-bar .navbar .txt-name {
+  background-color: black;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+.nav-bar .navbar .menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.nav-bar .navbar .line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-bar .navbar .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.nav-bar .navbar .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.nav-bar .navbar .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.nav-bar .navbar .opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.nav-bar .navbar .opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.nav-bar .navbar .opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.nav-bar .navbarHome {
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.3);
+  width: 100%;
+}
+
+.nav-bar .navbarHome .homeMenu {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 65%;
+  background-color: #fff;
+}
+
+#darkmode .toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#darkmode .toggle-slot {
+  position: relative;
+  height: 2em;
+  width: 4em;
+  border: 2px solid #e4e7ec;
+  border-radius: 4em;
+  background-color: white;
+  box-shadow: 0px 10px 25px #e4e7ec;
+  transition: background-color 250ms;
+}
+
+#darkmode .toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #374151;
+}
+
+#darkmode .toggle-button {
+  transform: translate(2.35em, 0.25em);
+  position: absolute;
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 50%;
+  background-color: #ffeccf;
+  box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+}
+
+#darkmode .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0px 0px 0px 0.75em white;
+  transform: translate(0.25em, 0.25em);
+}
+
+#darkmode .sun-icon {
+  position: absolute;
+  height: 1.25em;
+  width: 1.25em;
+  color: #ffbb52;
+}
+
+#darkmode .sun-icon-wrapper {
+  position: absolute;
+  height: 1.25em;
+  width: 1.25em;
+  opacity: 1;
+  transform: translate(0.25em, 0.25em) rotate(15deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+}
+
+#darkmode .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  opacity: 0;
+  transform: translate(3em, 2em) rotate(0deg);
+}
+
+#darkmode .moon-icon {
+  position: absolute;
+  height: 1.25em;
+  width: 1.25em;
+  color: white;
+}
+
+#darkmode .moon-icon-wrapper {
+  position: absolute;
+  height: 1.25em;
+  width: 1.25em;
+  opacity: 0;
+  transform: translate(2.2em, 0.4em) rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
+}
+
+#darkmode .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  opacity: 1;
+  transform: translate(2.4em, 0.2em) rotate(-15deg);
+}
+
+header .header {
+  position: relative;
+}
+
+header .header .header-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+header .header .header-slider .preSlick {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  z-index: 5;
+}
+
+header .header .header-slider .nextSlick {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  z-index: 5;
+  display: block;
+}
+
+header .header .header-search {
+  position: absolute;
+  left: 25%;
+  bottom: -20px;
+}
+
+.product .container .slickProduct .productitem {
+  position: relative;
+}
+
+.product .container .slickProduct .productitem .item-hover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.product .container .slickProduct .productitem .item-hover:hover {
+  opacity: 1;
+}
+
+* {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.navbarBody {
+  height: 100vh;
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */

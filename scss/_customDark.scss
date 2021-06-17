@@ -1,0 +1,14 @@
+.darkmode {
+    background-color: black;
+    color: #fff;
+    .nav-bar {
+        .navbar {
+            background-color: rgb(34, 34, 34) !important;
+        }
+        background-color: rgb(34, 34, 34) !important;
+        color: $text-light;
+        .navbar-light .navbar-nav .nav-link {
+            color: $text-light !important;
+        }
+    }
+}

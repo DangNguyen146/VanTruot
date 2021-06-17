@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <title>HomePage</title>
+</head>
+
+<body class="">
+  <!-- Navbar -->
+  <div class="nav-bar">
+    <nav class="
+          navbar navbar-expand-lg navbar-light
+          container-fluid
+          shadow
+        ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./img/Logo.png" style="width: 50px" alt="" />
+        </a>
+        <div class=" d-flex d-lg-none">
+          <div id="darkmode" class="">
+            <label class="mt-2">
+              <input class='toggle-checkbox' type='checkbox' onclick="onDarkMode(event)"></input>
+              <div class='toggle-slot'>
+                <div class='sun-icon-wrapper'>
+                  <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                </div>
+                <div class='toggle-button'></div>
+                <div class='moon-icon-wrapper'>
+                  <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+          <button class="menu"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')); btnOpenhambuger()"
+            aria-label="Main Menu">
+            <svg width="50" height="50" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div class="collapse d-none d-lg-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" onclick="addClass(this)" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="SKATEBOARDS" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                SKATEBOARDS
+              </a>
+              <ul class="dropdown-menu dropdown-menu" aria-labelledby="SKATEBOARDS"
+                style="min-width: 32rem; left: -10rem">
+                <li class=" d-inline-flex">
+                  <ul>
+                    <h5 class="mb-0">SKATE</h5>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex">
+                  <ul>
+                    <h5 class="mb-0">SKATE</h5>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex">
+                  <ul>
+                    <h5 class="mb-0">SKATE</h5>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="addClass(this)">BLOG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="CONTACT" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                CONTACT
+              </a>
+              <ul class="dropdown-menu dropdown-menu" aria-labelledby="CONTACT">
+                <li><a class="dropdown-item" href="#">MAP</a></li>
+                <li><a class="dropdown-item" href="#">SUPPORT</a></li>
+                <li><a class="dropdown-item" href="#">ABOUT ME</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="collapse d-none d-lg-flex">
+          <button class="btn bubbly-button me-3 border border-light"><a class="text-decoration-none text-light"
+              href="#">Đăng
+              nhập</a> / <a class="text-decoration-none text-light" href="#">Đăng kí</a></button>
+          <div id="darkmode" class="">
+            <label class="mt-2">
+              <input class='toggle-checkbox' type='checkbox' oninput="onDarkMode(event)"></input>
+              <div class='toggle-slot'>
+                <div class='sun-icon-wrapper'>
+                  <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                </div>
+                <div class='toggle-button'></div>
+                <div class='moon-icon-wrapper'>
+                  <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- responsive -->
+    <div class="d-none animate__animated " id="navbarHome">
+      <div class="homeMenu shadow ">
+        <ul class="list-unstyled text-decoration-none">
+          <li class="w-100 pb-2 pt-3 ps-2">
+            <a class="text-decoration-none text-dark active fw-bold" onclick="addClass(this)" href="#">Trang chủ</a>
+          </li>
+          <hr />
+          <li class="w-100 pb-2 ps-2">
+            <a class="text-decoration-none text-dark" onclick="addClass(this)" href="#">Thông tin</a>
+          </li>
+          <hr />
+          <li class="w-100 pb-2 ps-2">
+            <a class="text-decoration-none text-dark" onclick="addClass(this)" href="#">Liên hệ</a>
+          </li>
+          <hr />
+          <div class="ps-2">
+            <button class="btn bubbly-button me-3 mb-2">Đăng nhập</button>
+            <button class="btn bubbly-button-outline">Đăng kí</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <header class="" style="margin-top: 70px;">
+    <div class="header">
+      <div class="header-slider">
+        <div><img src="./img/slider_1.png" style="width: 100%;" alt=""></div>
+        <div><img src="./img/slider_2.png" style="width: 100%;" alt=""></div>
+        <div><img src="./img/slider_3.png" style="width: 100%;" alt=""></div>
+        <div><img src="./img/slider_4.png" style="width: 100%;" alt=""></div>
+      </div>
+
+      <div class="header-search w-50">
+        <form class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search anymore" aria-label="Search anymore"
+            aria-describedby="basic-addon2">
+          <button class="input-group-text" id="basic-addon2" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <section class="intro mt-4">
+    <div class="container">
+      <h2 class="text-center mb-0" style="font-size: 3rem;">PRODUCT</h2>
+      <div class="row">
+        <div class="col-6 col-md-4 mb-2">
+          <img src="./img/banner-1.png" class="w-100" alt="">
+        </div>
+        <div class="col-6 col-md-4 mb-2">
+          <img src="./img/banner-2.png" class="w-100" alt="">
+        </div>
+        <div class="d-block d-md-none col-3"></div>
+        <div class="col-6 col-md-4 mb-2">
+          <img src="./img/banner-3.png" class="w-100" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container cover">
+      <img src="./img/banner.png" class="w-100" alt="">
+    </div>
+  </section>
+  <section class="product mt-4">
+    <div class="container">
+      <h2 class="text-center mb-0" style="font-size: 3rem;">FEATURE PRODUCT</h2>
+      <div class="slickProduct w-100">
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productitem text-center align-items-center">
+          <div class="item-content">
+            <div class="product-img text-center">
+              <img src="./img/1.png" class="h-100" alt="">
+            </div>
+            <div class="product-content text-center">
+              <h5>FLOWERS SURFSKATE COMPLETE - 9.625X30.75</h5>
+              <p>2.900.000₫</p>
+            </div>
+          </div>
+          <div class="item-hover">
+            <div class="ms-5 mt-5 text-center">
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-shopping-cart"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-search-plus"></i>
+              </div>
+              <div class="ms-5 mb-2 w-25 p-2 text-center border shadow item-hover-item">
+                <i class="fa fa-ice-cream"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-black-50 text-center bg-warning rounded shadow border">
+    <h1>
+      Day la footer
+    </h1>
+  </footer>
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="./js/slick.min.js"></script>
+
+  <script>
+    $('.header-slider').slick({
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: "<img class='preSlick slick-prev d-sm-block d-none' src='./img/left-arrow.png'>",
+      nextArrow: "<img class='nextSlick slick-next d-sm-block d-none' src='./img/right-arrow.png'>"
+    });
+  </script>
+  <script>
+    $('.slickProduct').slick({
+      infinite: true,
+      slidesToShow: 5,
+      rows: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: false,
+      nextArrow: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 1008,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+
+      ]
+    });
+  </script>
+
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
