@@ -1,5 +1,5 @@
 .darkmode {
-  background-color: black;
+  background-color: #1c1e21;
   color: #fff;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .darkmode .nav-bar .navbar {
-  background-color: #222222 !important;
+  background-color: #070707 !important;
 }
 
 .darkmode .nav-bar .navbar-light .navbar-nav .nav-link {
@@ -366,6 +366,62 @@ header .header .header-search {
 
 .product .container .slickProduct .productitem .item-hover:hover {
   opacity: 1;
+}
+
+.product .container .slickProduct .productitem .item-hover .bg-product {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+body.darkmode .product .container .slickProduct .productitem .item-hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.darkmode .product .container .slickProduct .productitem .item-hover .bg-product {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.sale-off {
+  background-image: url("./../img/sale_bg.png");
+  background-position: center;
+  height: 300px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.sale-off .sale-off-content {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translateX(-25%) translateY(-25%);
+  text-align: center;
+}
+
+.sale-off .sale-off-content h1 {
+  font-size: 3rem;
+}
+
+.sale-off .sale-off-content a {
+  font-size: 2rem;
+}
+
+.hangsanXuat .hangsanXuat-item .hangsanXuat-item-img img {
+  height: 100px;
+  width: 100%;
+}
+
+footer .foter-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 47px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border: 1px solid transparent;
 }
 
 * {
